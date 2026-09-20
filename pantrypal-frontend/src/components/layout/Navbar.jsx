@@ -62,16 +62,6 @@ export function Navbar() {
             </Link>
           ) : (
             <>
-              <Link
-                to="/login"
-                className="text-sm font-medium uppercase tracking-wide text-ink/70 hover:text-orange"
-              >
-                Log in
-              </Link>
-              <Link to="/register">
-                <Button size="sm">Get Started</Button>
-              </Link>
-            </>
           )}
         </div>
 
