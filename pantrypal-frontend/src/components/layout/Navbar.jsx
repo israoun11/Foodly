@@ -53,18 +53,6 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-4 md:flex">
-          {isAuthenticated ? (
-            <Link to="/account">
-              <Button size="sm" variant="outline">
-                Account
-              </Button>
-            </Link>
-          ) : (
-            <>
-          )}
-        </div>
-
         <button
           type="button"
           className="text-ink md:hidden"
