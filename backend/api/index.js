@@ -1,12 +1,6 @@
-import express from "express";
-
-const app = express();
-
-app.get("/api/health", (req, res) => {
-  res.json({
+export default function handler(req, res) {
+  res.status(200).json({
     status: "ok",
     message: "Foodly backend is working",
   });
-});
-
-export default app;
+}
