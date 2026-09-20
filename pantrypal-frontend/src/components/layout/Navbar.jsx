@@ -119,14 +119,7 @@ export function Navbar() {
                   </Button>
                 ) : (
                   <>
-                    <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                      <Button variant="outline" className="w-full">
-                        Log in
-                      </Button>
-                    </Link>
-                    <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                      <Button className="w-full">Get Started</Button>
-                    </Link>
+                    
                   </>
                 )}
               </div>
