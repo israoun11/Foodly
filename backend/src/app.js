@@ -30,12 +30,13 @@ export function createApp() {
 
   // CORS
   app.use(
-    cors({
-      origin: allowedOrigins,
-      credentials: true,
+  cors({
+    origin: "https://foodly-kappa-blue.vercel.app",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     }),
   );
-
   // Rate limiting
   const apiLimiter = rateLimit({
     windowMs: env.RATE_LIMIT_WINDOW_MS,
