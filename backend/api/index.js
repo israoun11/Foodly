@@ -1,18 +1,12 @@
-import { createApp } from "../app.js";
-import { connectDatabase } from "../config/database.js";
+import express from "express";
 
-let app;
+const app = express();
 
-async function getApp() {
-  if (!app) {
-    await connectDatabase();
-    app = createApp();
-  }
+app.get("/api/health", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "Foodly backend is working",
+  });
+});
 
-  return app;
-}
-
-export default async function handler(req, res) {
-  const application = await getApp();
-  return application(req, res);
-}
+export default app;
